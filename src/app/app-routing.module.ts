@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CategoriesModule } from '../app/pages/categories/categories.module';
 
 const routes: Routes = [
   { path: 'categories', loadChildren: './pages/categories/categories.module#CategoriesModule' }
