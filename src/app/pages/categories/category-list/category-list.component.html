@@ -1,1 +1,57 @@
-<p>category-list works!</p>
+<nav class="mb-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item active">Categorias</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md">
+    <h2 class="border-left pl-2">Categorias</h2>
+  </div>
+
+  <div class="col-md">
+    <buttom routerLink="new" class="btn btn-success float-right">+ Nova categoria</buttom>
+  </div>
+</div>
+
+<table class="table table-hover mt-5">
+  <thead class="bg-warning text-light">
+    <tr>
+      <th>Categoria</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <p class="mb-0"><strong>Lazer</strong></p>
+        <span><small>Cinema, parque, praia etc</small></span>
+      </td>
+      <td>
+        <buttom [routerLink]="[12, 'edit']" class="btn btn-info btn-sm mr-2">Editar</buttom>
+        <button class="btn btn-danger btn-sm">Excluir</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="mb-0"><strong>Lazer</strong></p>
+        <span><small>Cinema, parque, praia etc</small></span>
+      </td>
+      <td>
+        <buttom [routerLink]="[12, 'edit']" class="btn btn-info btn-sm mr-2">Editar</buttom>
+        <button class="btn btn-danger btn-sm">Excluir</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p class="mb-0"><strong>Lazer</strong></p>
+        <span><small>Cinema, parque, praia etc</small></span>
+      </td>
+      <td>
+        <buttom [routerLink]="[12, 'edit']" class="btn btn-info btn-sm mr-2">Editar</buttom>
+        <button class="btn btn-danger btn-sm">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
