@@ -22,40 +22,17 @@
       <th><p class="mb-0 float-right">Actions</p></th>
     </tr>
   </thead>
+
   <tbody>
-    <tr>
+    <tr *ngFor="let item of categories">
       <td>
-        <p class="mb-0"><strong>Lazer</strong></p>
-        <span class="text-secondary"><small>Cinema, parque, praia etc</small></span>
+        <p class="mb-0"><strong>{{ item.name }}</strong></p>
+        <span class="text-secondary"><small>{{ item.description }}</small></span>
       </td>
       <td>
         <div class="float-right">
-          <buttom [routerLink]="[12, 'edit']" class="btn btn-info btn-sm mr-2">Edit</buttom>
-          <button class="btn btn-danger btn-sm">Delete</button>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p class="mb-0"><strong>Lazer</strong></p>
-        <span class="text-secondary"><small>Cinema, parque, praia etc</small></span>
-      </td>
-      <td>
-        <div class="float-right">
-          <buttom [routerLink]="[12, 'edit']" class="btn btn-info btn-sm mr-2">Edit</buttom>
-          <button class="btn btn-danger btn-sm">Delete</button>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p class="mb-0"><strong>Lazer</strong></p>
-        <span class="text-secondary"><small>Cinema, parque, praia etc</small></span>
-      </td>
-      <td>
-        <div class="float-right">
-          <buttom [routerLink]="[12, 'edit']" class="btn btn-info btn-sm mr-2">Edit</buttom>
-          <button class="btn btn-danger btn-sm">Delete</button>
+          <buttom [routerLink]="[item.id, 'edit']" class="btn btn-info btn-sm mr-2">Edit</buttom>
+          <button class="btn btn-danger btn-sm" (click)="deleteCategory(item)">Delete</button>
         </div>
       </td>
     </tr>
