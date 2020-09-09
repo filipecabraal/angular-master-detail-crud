@@ -30,7 +30,7 @@ export class CategoryListComponent implements OnInit {
     if (alertDel) {
       this.categoryService.delete(category.id).subscribe(
         () => this.categories = this.categories.filter(item => item !== category),
-        () => alert('Error while deleting')
+        () => alert('Error while deleting.')
       );
     }
   }

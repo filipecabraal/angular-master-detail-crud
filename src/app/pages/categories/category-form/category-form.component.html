@@ -8,7 +8,7 @@
 
 <div class="row">
   <div class="col-md">
-    <h2 class="border-left pl-2">Categories form</h2>
+    <h2 class="border-left pl-2">Categories form {{ currentAction }} </h2>
   </div>
 
   <div class="col-md">
@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<form class="mt-5">
+<form class="mt-5" [formGroup]="categoryForm">
   <div class="card">
     <div class="card-header">
       Informations about the category
