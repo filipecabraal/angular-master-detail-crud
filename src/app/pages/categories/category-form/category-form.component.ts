@@ -41,14 +41,14 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
   }
 
   /**
-   *
+   * Method responsible for save which action will be taken on the form through the url parameters.
    */
   private setCurrentAction(): void {
     this.activatedRoute.snapshot.url[0].path === 'new' ? this.currentAction = 'new' : this.currentAction = 'edit';
   }
 
   /**
-   *
+   * Method responsible for build the form.
    */
   private buildCategoryForm(): void {
     this.categoryForm = this.formBuilder.group({
@@ -59,7 +59,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
   }
 
   /**
-   *
+   * Method responsible for load the category will be bind on the form.
    */
   private loadCategory(): void {
     if (this.currentAction === 'edit') {
@@ -76,7 +76,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
   }
 
   /**
-   *
+   * Method responsible for load the page title on the page.
    */
   private setPagetitle(): void {
     if (this.currentAction === 'new') {
